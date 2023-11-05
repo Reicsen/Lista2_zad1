@@ -1,4 +1,4 @@
-package com.Lista2_zad1;
+package com.lista2_zad1;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
