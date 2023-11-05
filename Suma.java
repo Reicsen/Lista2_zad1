@@ -22,4 +22,9 @@ public class Suma
             sumabrutto = sumabrutto + temp.wartoscbrutto;
         }
     }
+
+    public String wydrukSumy ()
+    {
+        return "SUMA\nNetto: " + this.sumanetto + "\tVAT: " + this.sumavat + "\tBrutto: " + this.sumabrutto;
+    }
 }
