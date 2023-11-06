@@ -53,4 +53,22 @@ public class Faktura
         }
         return wypis;
     }
+
+    public wydrukSumy()
+    {
+        float sumanetto = 0.0;
+        float sumavat = 0.0;
+        float sumabrutto = 0.0;
+
+        List<Element> listaelementow = this.produkty;
+
+        for (int i=listaelementow.size()-1; i>=0; i--)
+        {
+            Element temp = listaelementow.get(i);
+            sumanetto = sumanetto + temp.wartoscnetto;
+            sumavat = sumavat + temp.wartoscvat;
+            sumabrutto = sumabrutto + temp.wartoscbrutto;
+        }
+        return "SUMA\nNetto: " + sumanetto + "\tVAT: " + sumavat + "\tBrutto: " + sumabrutto;
+    }
 }
