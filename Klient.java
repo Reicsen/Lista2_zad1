@@ -1,7 +1,5 @@
 package main.java.com.lista2_zad1;
 
-import com.lista2_zad1.Element;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
