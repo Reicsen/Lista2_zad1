@@ -16,7 +16,7 @@ public class OknoWypisu
 {
     public Stage okno;
 
-    public OknoWypisu(Faktura f, Suma s)
+    public OknoWypisu(Faktura f)
     {
         Label infoglowne = new Label(f.wydrukDanych());
         infoglowne.setFont(Font.font("Callibri",FontWeight.BOLD,25));
@@ -36,7 +36,7 @@ public class OknoWypisu
         infoproduktow.setWrapText(true);
         infoproduktow.setMaxWidth(Double.POSITIVE_INFINITY);
 
-        Label infosumy = new Label(s.wydrukSumy());
+        Label infosumy = new Label(f.wydrukSumy());
         infosumy.setAlignment(Pos.CENTER);
         infosumy.setFont(Font.font("Callibri",FontWeight.BOLD,20));
         infosumy.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));

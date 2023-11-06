@@ -24,6 +24,11 @@ public class Faktura
         this.produkty = new ArrayList<>();
     }
 
+    public void dodajElement(Element e)
+    {
+        this.produkty.add(e);
+    }
+
     public String wydrukDanych()
     {
         return "Numer faktury: "+this.numerfaktury+"\nData sprzedaży: "+this.datasprzedazy+"\nData wystawienia: "+this.datawystawienia;
