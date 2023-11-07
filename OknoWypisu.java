@@ -57,7 +57,7 @@ public class OknoWypisu implements Wydruki
         return wypis;
     }
 
-    public wydrukSumy(Faktura f)
+    public String wydrukSumy(Faktura f)
     {
         return "SUMA\nNetto: " + f.sumaNetto() + "\tVAT: " + f.sumaVAT() + "\tBrutto: " + f.sumaBrutto;
     }
