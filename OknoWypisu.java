@@ -13,6 +13,11 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+//Dodatkowa klasa spoza modelu dziedziny (zgodnie z zasadą czysty wymysł) odpowiedzialna jedynie 
+//za wyświetlanie graficzne faktury, mająca na celu zwiększyć spójność poprzez odciążenie klienta
+//z tych odpowiedzialności.
+//W definicjach metod z interfejsu unikane są wyrażenia typu obiekt.metoda1().metoda2()... (prawo Demeter).
+
 public class OknoWypisu implements Wydruki
 {
     public Faktura faktura;

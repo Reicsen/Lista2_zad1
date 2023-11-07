@@ -18,6 +18,12 @@ import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
+//Klasa jest odpowiedzialna jedynie za dodawanie danych do faktury - wyświetlanie wizualne zostało
+//oddelegowane do osobnej klasy (wysoka spójność, czysty wymysł).
+//W operacjach związanych z obsługą faktury unikane są wyrażenia typu obiekt.metoda1().metoda2()... (prawo Demeter).
+//Klasa jest w każdym przypadku tworzenia instancji innej klasy odpowiednim kreatorem - posiada
+//wszystkie niezbędne informacje (co sprawdza przed stworzeniem obiektu innej klasy).
+
 public class Klient extends Application
 {
     public Faktura faktura;

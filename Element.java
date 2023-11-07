@@ -3,6 +3,11 @@ package main.java.com.lista2_zad1;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+//Klasa jest odpowiedzialna jedynie za przechowywanie danych pojedynczego elementu (wysoka spójność).
+//Klasa sama oblicza wartości pól wartoscnetto, wartoscvat i wartoscbrutto, ponieważ posiada wszystkie
+//potrzebne do tego informacje (Ekspert), dzięki czemu inna klasa nie posiada tej nadmiernej dla
+//niej funkcjonalności (wysoka spójność).
+
 public class Element 
 {
     public static double zaokraglanie(double liczba)

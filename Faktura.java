@@ -3,6 +3,12 @@ package main.java.com.lista2_zad1;
 import java.util.List;
 import java.util.ArrayList;
 
+//Klasa jest odpowiedzialna jedynie za przechowywanie danych i sumowanie liczb (wysoka spójność).
+//Jest to jedyna klasa mająca powiązanie z więcej niż jedną inną klasą, dzięki czemu sprzężenie 
+//całego systemu jest niskie.
+//W definicjach metod unikane są wyrażenia typu obiekt.metoda1().metoda2()... (prawo Demeter).
+//Klasa liczy sumy, ponieważ ma wszystkie konieczne do tego informacje (Ekspert).
+
 public class Faktura
 {
     public String numerfaktury;
