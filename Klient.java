@@ -258,15 +258,15 @@ public class Klient extends Application
                         try
                         {
                             int vat = Integer.parseInt(daneelementu4.getText());
-                            if (netto>0.0 && ilosc>0 && vat>=0)
+                            if (czyText(daneelementu1) && netto>0.0 && ilosc>0 && vat>=0)
                             {
                                 Element produkt = new Element(daneelementu1.getText(), netto, ilosc, vat);
                                 faktura.dodajElement(produkt);
+                                daneelementu1.setText("");
+                                daneelementu2.setText("");
+                                daneelementu3.setText("");
+                                daneelementu4.setText("");
                             }
-                            daneelementu1.setText("");
-                            daneelementu2.setText("");
-                            daneelementu3.setText("");
-                            daneelementu4.setText("");
                         }
                         catch (Exception e){e.printStackTrace();}
                     }
