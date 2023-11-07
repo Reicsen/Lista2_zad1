@@ -1,0 +1,40 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLActor</id><coordinates><x>70</x><y>80</y><w>100</w><h>110</h></coordinates><panel_attributes>Wystawiający</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>230</x><y>180</y><w>120</w><h>60</h></coordinates><panel_attributes>Wyświetlanie
+faktury</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>140</y><w>120</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;100;60</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>230</x><y>0</y><w>120</w><h>60</h></coordinates><panel_attributes>Tworzenie
+faktury</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>20</y><w>110</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>100</y><w>110</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>230</x><y>90</y><w>120</w><h>60</h></coordinates><panel_attributes>Dodawanie
+elementu</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>390</y><w>300</w><h>430</h></coordinates><panel_attributes>--
+PU01
+--
+Aktorzy
+--
+Warunki początkowe
+--
+Przebieg główny
+--
+Przebiegi alternatywne
+--
+Warunki końcowe
+--
+Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>390</y><w>320</w><h>430</h></coordinates><panel_attributes>--
+Tworzenie faktury
+--
+Wystawiający
+--
+-program jest włączony
+--
+1. Po włączeniu programu przez użytkownika, system
+    wyświetla pola tekstowe na dane
+2. Użytkownik wprowadza dane i wybiera ,,Stwórz
+    fakturę"
+3. System sprawdza czy wprowadzone numery NIP są
+    dodanimi liczbami całkowitymi oraz czy żadne pole
+    nie jest puste
+4. System tworzy fakturę i przełącza widok na okno
+    pozostałych przypadków użycia
+--
+Przebiegi alternatywne:
+I Podane numery NIP są niepoprawne
+4. System 
+--
+Warunki końcowe
+--
+Wyjątki</panel_attributes><additional_attributes></additional_attributes></element></diagram>

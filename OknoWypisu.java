@@ -14,35 +14,41 @@ import javafx.stage.Stage;
 
 public class OknoWypisu
 {
-    public Stage okno;
+    public Faktura faktura;
 
     public OknoWypisu(Faktura f)
     {
-        Label infoglowne = new Label(f.wydrukDanych());
+        this.faktura = f;
+    }
+
+    public void wypisz()
+    {
+        Label infoglowne = new Label(this.faktura.wydrukDanych());
         infoglowne.setFont(Font.font("Callibri",FontWeight.BOLD,25));
         infoglowne.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
         infoglowne.setWrapText(true);
         infoglowne.setMaxWidth(Double.POSITIVE_INFINITY);
 
-        Label infoosob = new Label(f.wydrukOsob());
+        Label infoosob = new Label(this.faktura.wydrukOsob());
         infoosob.setFont(Font.font("Callibri",FontWeight.BOLD,20));
         infoosob.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
         infoosob.setWrapText(true);
         infoosob.setMaxWidth(Double.POSITIVE_INFINITY);
 
-        Label infoproduktow = new Label(f.wydrukElementow());
+        Label infoproduktow = new Label(this.faktura.wydrukElementow());
         infoproduktow.setFont(Font.font("Callibri",FontWeight.BOLD,15));
         infoproduktow.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
         infoproduktow.setWrapText(true);
         infoproduktow.setMaxWidth(Double.POSITIVE_INFINITY);
 
-        Label infosumy = new Label(f.wydrukSumy());
+        Label infosumy = new Label(this.faktura.wydrukSumy());
         infosumy.setAlignment(Pos.CENTER);
         infosumy.setFont(Font.font("Callibri",FontWeight.BOLD,20));
         infosumy.setBackground(new Background(new BackgroundFill(Color.WHITE,null,null)));
         infosumy.setWrapText(true);
         infosumy.setMaxWidth(Double.POSITIVE_INFINITY);
 
+        Stage okno = new Stage();
         VBox siatka = new VBox(infoglowne,infoosob,infoproduktow,infosumy);
         Scene scena = new Scene(siatka);
         this.okno = new Stage();

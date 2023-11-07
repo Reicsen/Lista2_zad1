@@ -24,11 +24,8 @@ public class Klient extends Application
 
     boolean czyText(TextArea pole)
     {
-        if (pole.getText()=="")
-        {
-            return false;
-        }
-        return true;
+        String temp = pole.getText();
+        return temp.isEmpty();
     }
 
     @Override
@@ -238,9 +235,9 @@ public class Klient extends Application
                             baza.setScene(scenaObslugi);
                         }
                     }
-                    catch (NumberFormatException e){e.printStackTrace();};
+                    catch (Exception e){e.printStackTrace();}
                 }
-                catch (NumberFormatException e){e.printStackTrace();};
+                catch (Exception e){e.printStackTrace();}
             }            
         };
 
@@ -271,11 +268,11 @@ public class Klient extends Application
                             daneelementu3.setText("");
                             daneelementu4.setText("");
                         }
-                        catch (NumberFormatException e){e.printStackTrace();};
+                        catch (Exception e){e.printStackTrace();}
                     }
-                    catch (NumberFormatException e){e.printStackTrace();};
+                    catch (Exception e){e.printStackTrace();}
                 }
-                catch (NumberFormatException e){e.printStackTrace();};
+                catch (Exception e){e.printStackTrace();}
             }            
         };
 
@@ -287,6 +284,7 @@ public class Klient extends Application
             public void handle (ActionEvent event)
             {
                 OknoWypisu wydruk = new OknoWypisu(faktura);
+                wydruk.wypisz();
             }            
         };
 
