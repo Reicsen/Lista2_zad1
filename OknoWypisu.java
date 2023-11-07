@@ -38,7 +38,7 @@ public class OknoWypisu implements Wydruki
 
     public String wydrukElementu(Element e)
     {
-        return e.nazwa + "\t" + e.nazwa + "x" + e.jednostkowanetto + "PLN\tVAT: " + e.VAT + "%\tBrutto: " + e.wartoscbrutto + "PLN";
+        return e.nazwa + "\t\t" + e.ilosc + "x" + e.jednostkowanetto + "PLN\t\tVAT: " + e.VAT + "%\t\tBrutto: " + e.wartoscbrutto + "PLN";
     }
 
     public String wydrukElementow(Faktura f)

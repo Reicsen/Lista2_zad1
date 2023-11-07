@@ -25,65 +25,65 @@ public class Klient extends Application
     boolean czyText(TextArea pole)
     {
         String temp = pole.getText();
-        return temp.isEmpty();
+        return !temp.isEmpty();
     }
 
     @Override
     public void start(Stage baza)
     {
-        Label polecenie1 = new Label("Podaj numer faktury:");
-        polecenie1.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenie1 = new Label("Podaj numer faktury: \n ");
+        polecenie1.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenie1.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenie1.setWrapText(true);
-        polecenie1.setMaxWidth(500.0);
+        polecenie1.setMaxWidth(700.0);
 
-        Label polecenie2 = new Label("Podaj datę sprzedaży:");
-        polecenie2.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
-        polecenie2.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
+        Label polecenie2 = new Label("Podaj datę sprzedaży: \n ");
+        polecenie2.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
+        polecenie2.setBackground(new Background(new BackgroundFill(Color.ANTIQUEWHITE, null, null)));
         polecenie2.setWrapText(true);
-        polecenie2.setMaxWidth(500.0);
+        polecenie2.setMaxWidth(700.0);
 
-        Label polecenie3 = new Label("Podaj datę wystawienia:");
-        polecenie3.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenie3 = new Label("Podaj datę wystawienia: \n ");
+        polecenie3.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenie3.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenie3.setWrapText(true);
-        polecenie3.setMaxWidth(500.0);
+        polecenie3.setMaxWidth(700.0);
 
-        Label polecenie4 = new Label("Podaj sprzedawcę:");
-        polecenie4.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
-        polecenie4.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
+        Label polecenie4 = new Label("Podaj sprzedawcę: \n ");
+        polecenie4.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
+        polecenie4.setBackground(new Background(new BackgroundFill(Color.ANTIQUEWHITE, null, null)));
         polecenie4.setWrapText(true);
-        polecenie4.setMaxWidth(500.0);
+        polecenie4.setMaxWidth(700.0);
 
-        Label polecenie5 = new Label("Podaj adres sprzedawcy:");
-        polecenie5.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenie5 = new Label("Podaj adres sprzedawcy: \n ");
+        polecenie5.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenie5.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenie5.setWrapText(true);
-        polecenie5.setMaxWidth(500.0);
+        polecenie5.setMaxWidth(700.0);
 
-        Label polecenie6 = new Label("Podaj NIP sprzedawcy:");
-        polecenie6.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
-        polecenie6.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
+        Label polecenie6 = new Label("Podaj NIP sprzedawcy: \n ");
+        polecenie6.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
+        polecenie6.setBackground(new Background(new BackgroundFill(Color.ANTIQUEWHITE, null, null)));
         polecenie6.setWrapText(true);
-        polecenie6.setMaxWidth(500.0);
+        polecenie6.setMaxWidth(700.0);
 
-        Label polecenie7 = new Label("Podaj nabywcę:");
-        polecenie7.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenie7 = new Label("Podaj nabywcę: \n ");
+        polecenie7.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenie7.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenie7.setWrapText(true);
-        polecenie7.setMaxWidth(500.0);
+        polecenie7.setMaxWidth(700.0);
 
-        Label polecenie8 = new Label("Podaj adres nabywcy:");
-        polecenie8.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
-        polecenie8.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
+        Label polecenie8 = new Label("Podaj adres nabywcy: \n ");
+        polecenie8.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
+        polecenie8.setBackground(new Background(new BackgroundFill(Color.ANTIQUEWHITE, null, null)));
         polecenie8.setWrapText(true);
-        polecenie8.setMaxWidth(500.0);
+        polecenie8.setMaxWidth(700.0);
 
-        Label polecenie9 = new Label("Podaj NIP nabywcy:");
-        polecenie9.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenie9 = new Label("Podaj NIP nabywcy: \n ");
+        polecenie9.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenie9.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenie9.setWrapText(true);
-        polecenie9.setMaxWidth(500.0);
+        polecenie9.setMaxWidth(700.0);
 
         TextArea dane1 = new TextArea();
         dane1.setFont(Font.font("Callibri", 25));
@@ -137,29 +137,29 @@ public class Klient extends Application
         stworz.setAlignment(Pos.CENTER);
 
 
-        Label polecenieelementu1 = new Label("Podaj nazwę elementu:");
-        polecenieelementu1.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenieelementu1 = new Label("Podaj nazwę elementu: \n ");
+        polecenieelementu1.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenieelementu1.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenieelementu1.setWrapText(true);
-        polecenieelementu1.setMaxWidth(500.0);
+        polecenieelementu1.setMaxWidth(700.0);
 
-        Label polecenieelementu2 = new Label("Podaj wartość netto:");
-        polecenieelementu2.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
-        polecenieelementu2.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
+        Label polecenieelementu2 = new Label("Podaj wartość netto: \n ");
+        polecenieelementu2.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
+        polecenieelementu2.setBackground(new Background(new BackgroundFill(Color.ANTIQUEWHITE, null, null)));
         polecenieelementu2.setWrapText(true);
-        polecenieelementu2.setMaxWidth(500.0);
+        polecenieelementu2.setMaxWidth(700.0);
 
-        Label polecenieelementu3 = new Label("Podaj ilość:");
-        polecenieelementu3.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
+        Label polecenieelementu3 = new Label("Podaj ilość: \n ");
+        polecenieelementu3.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
         polecenieelementu3.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
         polecenieelementu3.setWrapText(true);
-        polecenieelementu3.setMaxWidth(500.0);
+        polecenieelementu3.setMaxWidth(700.0);
 
-        Label polecenieelementu4 = new Label("Podaj VAT(w %):");
-        polecenieelementu4.setFont(Font.font("Callibri", FontWeight.BOLD, 25));
-        polecenieelementu4.setBackground(new Background(new BackgroundFill(Color.CORNSILK, null, null)));
+        Label polecenieelementu4 = new Label("Podaj VAT(w %): \n ");
+        polecenieelementu4.setFont(Font.font("Callibri", FontWeight.BOLD, 29));
+        polecenieelementu4.setBackground(new Background(new BackgroundFill(Color.ANTIQUEWHITE, null, null)));
         polecenieelementu4.setWrapText(true);
-        polecenieelementu4.setMaxWidth(500.0);
+        polecenieelementu4.setMaxWidth(700.0);
 
         TextArea daneelementu1 = new TextArea();
         daneelementu1.setFont(Font.font("Callibri", 25));

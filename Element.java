@@ -29,7 +29,7 @@ public class Element
         this.VAT = v;
 
         this.wartoscnetto = zaokraglanie(jednostkowanetto*ilosc);
-        this.wartoscvat = zaokraglanie((wartoscnetto/100.0)*VAT);
-        this.wartoscbrutto = wartoscnetto + wartoscvat;
+        this.wartoscvat = zaokraglanie(wartoscnetto*0.01*VAT);
+        this.wartoscbrutto = zaokraglanie(wartoscnetto + wartoscvat);
     }
 }
