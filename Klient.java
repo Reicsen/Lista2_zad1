@@ -290,4 +290,9 @@ public class Klient extends Application
 
         wyswietl.setOnAction(wyswietlanie);
     }
+
+    public static void main(String[] args)
+    {
+        launch(args);
+    }
 }
