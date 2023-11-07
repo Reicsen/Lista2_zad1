@@ -251,7 +251,7 @@ public class Klient extends Application
             {
                 try
                 {
-                    float netto = Float.parseFloat(daneelementu2.getText());
+                    float netto = Double.parseDouble(daneelementu2.getText());
                     try
                     {
                         int ilosc = Integer.parseInt(daneelementu3.getText());

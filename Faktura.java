@@ -32,9 +32,9 @@ public class Faktura
         this.produkty.add(e);
     }
 
-    public float sumaNetto()
+    public double sumaNetto()
     {
-        float sumanetto = 0.0;
+        double sumanetto = 0.0;
 
         List<Element> listaelementow = this.produkty;
 
@@ -46,9 +46,9 @@ public class Faktura
         return sumanetto;
     }
 
-    public float sumaVAT()
+    public double sumaVAT()
     {
-        float sumavat = 0.0;
+        double sumavat = 0.0;
 
         List<Element> listaelementow = this.produkty;
 
@@ -60,9 +60,9 @@ public class Faktura
         return sumavat;
     }
 
-    public float sumaBrutto()
+    public double sumaBrutto()
     {
-        float sumabrutto = 0.0;
+        double sumabrutto = 0.0;
 
         List<Element> listaelementow = this.produkty;
 

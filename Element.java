@@ -13,15 +13,15 @@ public class Element
     }
 
     public String nazwa;
-    public float jednostkowanetto;
+    public double jednostkowanetto;
     public int ilosc;
     public int VAT;
 
-    public float wartoscnetto;
-    public float wartoscvat;
-    public float wartoscbrutto;
+    public double wartoscnetto;
+    public double wartoscvat;
+    public double wartoscbrutto;
 
-    public Element(String nazw, float netto, int il, int v)
+    public Element(String nazw, double netto, int il, int v)
     {
         this.nazwa = nazw;
         this.jednostkowanetto = netto;
