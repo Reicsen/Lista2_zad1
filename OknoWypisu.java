@@ -92,7 +92,6 @@ public class OknoWypisu implements Wydruki
         Stage okno = new Stage();
         VBox siatka = new VBox(infoglowne,infoosob,infoproduktow,infosumy);
         Scene scena = new Scene(siatka);
-        this.okno = new Stage();
         okno.setTitle("Zadanie 1.");
         siatka.setPrefWidth(Screen.getPrimary().getVisualBounds().getWidth());
         siatka.setPrefHeight(Screen.getPrimary().getVisualBounds().getHeight());

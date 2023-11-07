@@ -1,9 +1,6 @@
 package main.java.com.lista2_zad1;
 
 import java.util.List;
-
-import com.lista2_zad1.Element;
-
 import java.util.ArrayList;
 
 public class Faktura

@@ -194,7 +194,7 @@ public class Klient extends Application
         wyswietl.setAlignment(Pos.CENTER);
         
         VBox labele = new VBox(polecenie1,polecenie2,polecenie3,polecenie4,polecenie5,polecenie6,polecenie7,polecenie8,polecenie9);
-        VBox polaTekstowe = new Vbox(dane1,dane2,dane3,dane4,dane5,dane6,dane7,dane8,dane9);
+        VBox polaTekstowe = new VBox(dane1,dane2,dane3,dane4,dane5,dane6,dane7,dane8,dane9);
         HBox pola = new HBox(labele,polaTekstowe);
         VBox siatka1 = new VBox(pola,stworz);
         siatka1.setAlignment(Pos.TOP_CENTER);
@@ -251,7 +251,7 @@ public class Klient extends Application
             {
                 try
                 {
-                    float netto = Double.parseDouble(daneelementu2.getText());
+                    double netto = Double.parseDouble(daneelementu2.getText());
                     try
                     {
                         int ilosc = Integer.parseInt(daneelementu3.getText());
