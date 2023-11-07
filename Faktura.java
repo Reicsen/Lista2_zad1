@@ -1,6 +1,9 @@
 package main.java.com.lista2_zad1;
 
 import java.util.List;
+
+import com.lista2_zad1.Element;
+
 import java.util.ArrayList;
 
 public class Faktura
@@ -29,41 +32,9 @@ public class Faktura
         this.produkty.add(e);
     }
 
-    public String wydrukDanych()
-    {
-        return "Numer faktury: "+this.numerfaktury+"\nData sprzedaży: "+this.datasprzedazy+"\nData wystawienia: "+this.datawystawienia;
-    }
-
-    public String wydrukOsob()
-    {
-        Osoba sprz = this.sprzedawca;
-        String tekstsprzedawcy = "Sprzedawca:\n"+sprz.dane+"\n"+sprz.adres+"\n"+sprz.NIP;
-        Osoba nab = this.nabywca;
-        String tekstnabywcy = "Nabywca:\n"+nab.dane+"\n"+nab.adres+"\n"+nab.NIP;
-        return tekstsprzedawcy+"\n\n"+tekstnabywcy;
-    }
-
-    public String wydrukElementow()
-    {
-        List<Element> listaelementow = this.produkty;
-        String wypis="";
-        for (int i = listaelementow.size()-1; i >= 0; i--)
-        {
-            Element temp = listaelementow.get(i);
-            wypis = wypis + temp.nazwa + "\t" + temp.nazwa + "x" + temp.jednostkowanetto + "PLN\tVAT: " + temp.VAT + "%\tBrutto: " + temp.wartoscbrutto + "PLN";
-            if (i != 0)
-            {
-                wypis = wypis + "\n";
-            }
-        }
-        return wypis;
-    }
-
-    public wydrukSumy()
+    public float sumaNetto()
     {
         float sumanetto = 0.0;
-        float sumavat = 0.0;
-        float sumabrutto = 0.0;
 
         List<Element> listaelementow = this.produkty;
 
@@ -71,9 +42,35 @@ public class Faktura
         {
             Element temp = listaelementow.get(i);
             sumanetto = sumanetto + temp.wartoscnetto;
+        }
+        return sumanetto;
+    }
+
+    public float sumaVAT()
+    {
+        float sumavat = 0.0;
+
+        List<Element> listaelementow = this.produkty;
+
+        for (int i=listaelementow.size()-1; i>=0; i--)
+        {
+            Element temp = listaelementow.get(i);
             sumavat = sumavat + temp.wartoscvat;
+        }
+        return sumavat;
+    }
+
+    public float sumaBrutto()
+    {
+        float sumabrutto = 0.0;
+
+        List<Element> listaelementow = this.produkty;
+
+        for (int i=listaelementow.size()-1; i>=0; i--)
+        {
+            Element temp = listaelementow.get(i);
             sumabrutto = sumabrutto + temp.wartoscbrutto;
         }
-        return "SUMA\nNetto: " + sumanetto + "\tVAT: " + sumavat + "\tBrutto: " + sumabrutto;
+        return sumabrutto;
     }
 }

@@ -1,7 +1,7 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLActor</id><coordinates><x>130</x><y>80</y><w>100</w><h>110</h></coordinates><panel_attributes>Wystawiający</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>290</x><y>180</y><w>120</w><h>60</h></coordinates><panel_attributes>Wyświetlanie
-faktury</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>140</y><w>120</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;100;60</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>290</x><y>0</y><w>120</w><h>60</h></coordinates><panel_attributes>Tworzenie
-faktury</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>20</y><w>110</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>100</y><w>110</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>290</x><y>90</y><w>120</w><h>60</h></coordinates><panel_attributes>Dodawanie
-elementu</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>270</y><w>300</w><h>460</h></coordinates><panel_attributes>--
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLActor</id><coordinates><x>40</x><y>230</y><w>100</w><h>110</h></coordinates><panel_attributes>Wystawiający</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>200</x><y>330</y><w>120</w><h>60</h></coordinates><panel_attributes>Wyświetlanie
+faktury</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>100</x><y>290</y><w>120</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;100;60</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>200</x><y>150</y><w>120</w><h>60</h></coordinates><panel_attributes>Tworzenie
+faktury</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>170</y><w>110</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;70;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>250</y><w>110</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>200</x><y>240</y><w>120</w><h>60</h></coordinates><panel_attributes>Dodawanie
+elementu</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>420</y><w>300</w><h>460</h></coordinates><panel_attributes>--
 PU01
 --
 Aktorzy
@@ -28,7 +28,7 @@ Przepływy alternatywne
 Warunki końcowe
 
 --
-Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>270</y><w>320</w><h>460</h></coordinates><panel_attributes>--
+Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>420</y><w>320</w><h>460</h></coordinates><panel_attributes>--
 Tworzenie faktury
 --
 Wystawiający
@@ -61,7 +61,7 @@ dodawania elementów i wyświetlania faktury
 -niepodanie wszystkich danych - system wraca do
  stanu oczekiwania na podanie danych
 -podanie niedodatniego NIPu - system wraca do
- stanu oczekiwania na podanie danych</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>780</y><w>300</w><h>490</h></coordinates><panel_attributes>--
+ stanu oczekiwania na podanie danych</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>930</y><w>300</w><h>490</h></coordinates><panel_attributes>--
 PU02
 --
 Aktorzy
@@ -88,7 +88,7 @@ Przepływy alternatywne
 Warunki końcowe
 
 --
-Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>780</y><w>320</w><h>490</h></coordinates><panel_attributes>--
+Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>930</y><w>320</w><h>490</h></coordinates><panel_attributes>--
 Dodanie elementu
 --
 Wystawiający
@@ -123,7 +123,7 @@ danych elementu
  stanu oczekiwania na podanie danych
 -podanie ujemnego VATu albo niedodatniej ceny
  lub ilości - system wraca do stanu oczekiwania
- na podanie danych</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>1310</y><w>300</w><h>170</h></coordinates><panel_attributes>--
+ na podanie danych</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>1460</y><w>300</w><h>170</h></coordinates><panel_attributes>--
 PU03
 --
 Aktorzy
@@ -137,7 +137,7 @@ Przepływy alternatywne
 --
 Warunki końcowe
 --
-Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>1310</y><w>320</w><h>170</h></coordinates><panel_attributes>--
+Wyjątki</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>1460</y><w>320</w><h>170</h></coordinates><panel_attributes>--
 Wyświetlenie faktury
 --
 Wystawiający
@@ -151,4 +151,10 @@ Wystawiający
 --
 Wyświetlenie okna z danymi faktury
 --
-[brak]</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+[brak]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>60</y><w>240</w><h>30</h></coordinates><panel_attributes>Faktura
+--
++numerfaktury: String
++datasprzedazy: String
++datawystawienia: String
++sprzedawca: Osoba
++nabywca: Osoba</panel_attributes><additional_attributes></additional_attributes></element></diagram>
