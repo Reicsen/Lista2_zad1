@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 //oddelegowane do osobnej klasy (wysoka spójność, czysty wymysł).
 //W operacjach związanych z obsługą faktury unikane są wyrażenia typu obiekt.metoda1().metoda2()... (prawo Demeter).
 //Klasa jest w każdym przypadku tworzenia instancji innej klasy odpowiednim kreatorem - posiada
-//wszystkie niezbędne informacje (co sprawdza przed stworzeniem obiektu innej klasy).
+//wszystkie niezbędne informacje.
 
 public class Klient extends Application
 {
@@ -232,14 +232,22 @@ public class Klient extends Application
                     try
                     {
                         int nipnab = Integer.parseInt(dane9.getText());
-                        if (nipsprz>0 && nipnab>0 && czyText(dane1) && czyText(dane2) && czyText(dane3) && czyText(dane4) && czyText(dane5) && czyText(dane7) && czyText(dane8))
+                        try
                         {
                             Osoba sprzedawca = new Osoba(dane4.getText(), dane5.getText(), nipsprz);
-                            Osoba nabywca = new Osoba(dane7.getText(), dane8.getText(), nipnab);
-
-                            faktura = new Faktura(dane1.getText(), dane2.getText(), dane3.getText(), sprzedawca, nabywca);
-                            baza.setScene(scenaObslugi);
+                            try
+                            {
+                                Osoba nabywca = new Osoba(dane7.getText(), dane8.getText(), nipnab);
+                                try
+                                {
+                                    faktura = new Faktura(dane1.getText(), dane2.getText(), dane3.getText(), sprzedawca, nabywca);
+                                    baza.setScene(scenaObslugi);
+                                }
+                                catch (Exception e){e.printStackTrace();}
+                            }
+                            catch (Exception e){e.printStackTrace();}
                         }
+                        catch (Exception e){e.printStackTrace();}
                     }
                     catch (Exception e){e.printStackTrace();}
                 }
@@ -264,7 +272,7 @@ public class Klient extends Application
                         try
                         {
                             int vat = Integer.parseInt(daneelementu4.getText());
-                            if (czyText(daneelementu1) && netto>0.0 && ilosc>0 && vat>=0)
+                            try
                             {
                                 Element produkt = new Element(daneelementu1.getText(), netto, ilosc, vat);
                                 faktura.dodajElement(produkt);
@@ -273,6 +281,7 @@ public class Klient extends Application
                                 daneelementu3.setText("");
                                 daneelementu4.setText("");
                             }
+                            catch (Exception e){e.printStackTrace();}
                         }
                         catch (Exception e){e.printStackTrace();}
                     }

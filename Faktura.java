@@ -8,6 +8,8 @@ import java.util.ArrayList;
 //całego systemu jest niskie.
 //W definicjach metod unikane są wyrażenia typu obiekt.metoda1().metoda2()... (prawo Demeter).
 //Klasa liczy sumy, ponieważ ma wszystkie konieczne do tego informacje (Ekspert).
+//Konstruktor sprawdza poprawność danych, dzięki czemu nie musi tego robić klasa przekazująca
+//dane (wysoka spójność).
 
 public class Faktura
 {
@@ -19,15 +21,22 @@ public class Faktura
 
     List<Element> produkty;
 
-    public Faktura(String nr, String sprzedaz, String wystawienie, Osoba sprz, Osoba nab)
+    public Faktura(String nr, String sprzedaz, String wystawienie, Osoba sprz, Osoba nab) throws ZleDane
     {
-        this.numerfaktury = nr;
-        this.datasprzedazy = sprzedaz;
-        this.datawystawienia = wystawienie;
-        this.sprzedawca = sprz;
-        this.nabywca = nab;
+        if (nr.isEmpty() || sprzedaz.isEmpty() || wystawienie.isEmpty())
+        {
+            throw new ZleDane();
+        }
+        else
+        {
+            this.numerfaktury = nr;
+            this.datasprzedazy = sprzedaz;
+            this.datawystawienia = wystawienie;
+            this.sprzedawca = sprz;
+            this.nabywca = nab;
 
-        this.produkty = new ArrayList<>();
+            this.produkty = new ArrayList<>();
+        }
     }
 
     public void dodajElement(Element e)

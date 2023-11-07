@@ -7,8 +7,10 @@ import java.math.RoundingMode;
 //Klasa sama oblicza wartości pól wartoscnetto, wartoscvat i wartoscbrutto, ponieważ posiada wszystkie
 //potrzebne do tego informacje (Ekspert), dzięki czemu inna klasa nie posiada tej nadmiernej dla
 //niej funkcjonalności (wysoka spójność).
+//Konstruktor sprawdza poprawność danych, dzięki czemu nie musi tego robić klasa przekazująca
+//dane (wysoka spójność).
 
-public class Element 
+public class Element
 {
     public static double zaokraglanie(double liczba)
     {
@@ -26,15 +28,22 @@ public class Element
     public double wartoscvat;
     public double wartoscbrutto;
 
-    public Element(String nazw, double netto, int il, int v)
+    public Element(String nazw, double netto, int il, int v) throws ZleDane
     {
-        this.nazwa = nazw;
-        this.jednostkowanetto = netto;
-        this.ilosc = il;
-        this.VAT = v;
+        if (netto<=0.0 || il<0 || v<0 || nazw.isEmpty())
+        {
+            throw new ZleDane();
+        }
+        else
+        {
+            this.nazwa = nazw;
+            this.jednostkowanetto = netto;
+            this.ilosc = il;
+            this.VAT = v;
 
-        this.wartoscnetto = zaokraglanie(jednostkowanetto*ilosc);
-        this.wartoscvat = zaokraglanie(wartoscnetto*0.01*VAT);
-        this.wartoscbrutto = zaokraglanie(wartoscnetto + wartoscvat);
+            this.wartoscnetto = zaokraglanie(jednostkowanetto*ilosc);
+            this.wartoscvat = zaokraglanie(wartoscnetto*0.01*VAT);
+            this.wartoscbrutto = zaokraglanie(wartoscnetto + wartoscvat);
+        }
     }
 }
